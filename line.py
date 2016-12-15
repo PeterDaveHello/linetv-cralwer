@@ -26,7 +26,7 @@ class Line:
 
 	def run(self):
 		file = urllib.URLopener()
-		file.retrieve(a + self.index + '.ts' + b, PATH + PATH + self.index + '.ts')
+		file.retrieve(a + self.index + '.ts' + b, PATH + PART + self.index + '.ts')
 		print '{index}'.format(index = self.index)
 
 # init
