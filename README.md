@@ -25,3 +25,6 @@ git clone https://github.com/noname0930/linetv-cralwer.git
 - Fix duration: tsMuxeR
 - Convert to mkv: ffmpeg
     - [my-script](http://github.com/noname0930/my-scripts/) here
+	    ```
+	    ffmpeg -i input.ts -c:v copy output.mkv
+	    ```
