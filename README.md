@@ -17,8 +17,9 @@ python3 linetv-crawler.py "url of part1" "url of part2" -p <storage folder> -o <
 ```
 
 ## Others
-- Fix duration error [tsMuxeR](https://www.videohelp.com/software/tsMuxeR)
+- Fix inconsistent video length [tsMuxeR](https://www.videohelp.com/software/tsMuxeR)
 - Convert ```.ts``` to ```.mkv```: ffmpeg
+
   ```
   ffmpeg -i input.ts -c:v copy output.mkv
   ```
