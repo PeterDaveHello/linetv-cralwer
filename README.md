@@ -1,30 +1,27 @@
 # linetv-cralwer
+> A simple tool for downloading video from LINE TV
 
-## Install
-```
-git clone https://github.com/noname0930/linetv-cralwer.git
-```
+## Requirements
+- python3
+
+## Introduction
+LINE TV provides high resolution video streaming with '.ts' format. ```linetv-crawler``` enables user to download whole video with single command.
 
 ## Usage
-- line.py
+LINE TV divides single episode into several parts. Therefore, we need to find out the video's urls for each part.
 
-| index | var |
-| ----- | ----- |
-| 1 | one url of .ts from line_tv |
-| 2 | storage folder |
-| 3 | part of episode |
-    
-- merge.py
+The video's url can be found by using the develope mode of browser (Google Chrome). For example ```https:/tv-line.../x.ts?__gda__=...```
 
-| index | var |
-| ----- | ----- |
-| 1 | store path |
-| 2 | file name |
+```
+python3 linetv-crawler.py "url of part1" "url of part2" -p <storage folder> -o <outfile name>
+```
 
 ## Others
-- Fix duration: tsMuxeR
-- Convert to mkv: ffmpeg
-    - [my-script](http://github.com/noname0930/my-scripts/) here
-	    ```
-	    ffmpeg -i input.ts -c:v copy output.mkv
-	    ```
+- Fix duration error [tsMuxeR](https://www.videohelp.com/software/tsMuxeR)
+- Convert ```.ts``` to ```.mkv```: ffmpeg
+  ```
+  ffmpeg -i input.ts -c:v copy output.mkv
+  ```
+
+## Version
+v1.0
